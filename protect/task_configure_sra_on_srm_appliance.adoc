@@ -1,0 +1,34 @@
+---
+permalink: protect/task_configure_sra_on_srm_appliance.html 
+sidebar: sidebar 
+keywords:  
+summary: 'Sobald Sie die SRM Appliance implementiert haben, sollten Sie SRA auf der SRM Appliance konfigurieren. Die erfolgreiche Konfiguration von SRA ermöglicht die Kommunikation der SRM Appliance mit SRA für das Disaster-Recovery-Management. Um die Kommunikation zwischen SRM-Appliance und SRA zu ermöglichen, sollten Sie die Zugangsdaten für das ONTAP-Tool \(IP-Adresse und Administratorpasswort\) in der SRM-Appliance speichern.' 
+---
+= Konfigurieren Sie SRA auf der SRM Appliance
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Sobald Sie die SRM Appliance implementiert haben, sollten Sie SRA auf der SRM Appliance konfigurieren. Die erfolgreiche Konfiguration von SRA ermöglicht die Kommunikation der SRM Appliance mit SRA für das Disaster-Recovery-Management. Um die Kommunikation zwischen SRM-Appliance und SRA zu ermöglichen, sollten die Zugangsdaten für das ONTAP-Tool (IP-Adresse und Administratorpasswort) in der SRM Appliance gespeichert werden.
+
+*Was Sie brauchen*
+
+Sie sollten die Datei _tar.gz_ auf die SRM Appliance hochgeladen haben.
+
+*Über diese Aufgabe*
+
+Die Konfiguration von SRA auf einer SRM Appliance speichert die SRA Anmeldedaten in der SRM Appliance.
+
+*Schritte*
+
+. Melden Sie sich mit Hilfe eines Administratorkontos an der SRM-Appliance mit putty an.
+. Wechseln Sie mit dem Befehl zum Root-Benutzer: `su root`
+. Geben Sie an der Protokollposition den Befehl ein, um die von SRA-Docker verwendete Andocknummer zu erhalten `ps -l`
+. Um sich bei der Container-ID anzumelden, geben Sie den Befehl Docker ein `exec -it -u srm <container id> sh`
+. Konfigurieren Sie SRM mit der IP-Adresse und dem Passwort der ONTAP-Tools mit dem Befehl: `perl command.pl -I <va-IP> administrator <va-password>``
++
+Eine Erfolgsmeldung, die bestätigt, dass die Speicher-Anmeldedaten gespeichert werden, wird angezeigt. SRA kann mit dem SRA-Server unter Verwendung der angegebenen IP-Adresse, des Ports und der Anmeldeinformationen kommunizieren.
+
+
