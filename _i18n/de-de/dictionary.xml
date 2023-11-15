@@ -578,7 +578,6 @@ rm - rf com.netapp.vsch5-x.x.x.xxxx
   <block id="3d7de81ead511dc0d2bd3eeb864ff231" category="paragraph">Wenn Sie möchten, dass die VSC die Größe des enthaltenden Volumes ändert, wenn es den VMFS-Datastore neu vergrößert, sollten Sie bei der ersten Bereitstellung des VMFS-Datastore nicht die Option *vorhandenes Volume* verwenden* unter Speicherattribut-Abschnitt verwenden, sondern es automatisch ein neues Volume für jeden Datastore erstellen lassen.</block>
   <block id="b6b2c55f92e8e04471c740483e69a795" category="paragraph">Sie können einen NFS-Datenspeicher vergrößern oder verkleinern, aber bei einem VMFS-Datastore ist nur eine Vergrößerung möglich. Die Größe des Datenspeichers wird auch bei FlexGroup-Datenspeichern unterstützt, bei denen die Option „Auto Grow“ und „Verkleinerung“ aktiviert ist. Ein FlexGroup, der Teil eines herkömmlichen Datastores und ein FlexVol Volume ist, das Teil eines VVols Datastores ist, kann nicht unter die vorhandene Größe sinken, er kann jedoch maximal 120 % wachsen. Standard-Snapshots sind auf diesen FlexGroup und FlexVol Volumes aktiviert.</block>
   <block id="0e6fc56cbe91d72cb03e33a904ae9ab3" category="list-text">Wählen Sie im Navigationsbereich das Rechenzentrum aus, das den Datastore enthält.</block>
-  <block id="a15d1bf5dee929fddbf2e03ae0f830e9" category="list-text">Klicken Sie mit der rechten Maustaste auf den Datastore und wählen Sie *NetApp ONTAP Tools* &gt; *QoS zuweisen* aus.</block>
   <block id="425e99780c82b74f333dd7da3068f492" category="list-text">Geben Sie im Dialogfeld Größe ändern eine neue Größe für den Datastore an, und klicken Sie dann auf *OK*.</block>
   <block id="29b33d6a4971ded7e90ffb22fa8e685d" category="paragraph">Sie können die Option *RECOVER ALL* im Menü Storage Systems ausführen, um die Speicherliste unter Storage Systems und Dashboard manuell zu aktualisieren oder auf die nächste geplante Aktualisierung zu warten.</block>
   <block id="96175e97c8c13423e6a60249fa770130" category="summary">Mithilfe der herkömmlichen Konsole der ONTAP Tools können Sie die herkömmlichen Datenspeicher und Virtual Machines überwachen. Mit den Dashboard-Daten können Sie die Datenspeicherauslastung analysieren und Korrekturmaßnahmen ergreifen, um zu verhindern, dass die Virtual Machines mit speicherbezogenen Einschränkungen umgehen.</block>
@@ -1892,7 +1891,6 @@ Eine Erfolgsmeldung, die bestätigt, dass die Speicher-Anmeldedaten gespeichert 
   <block id="4c3c39a603eb21106d2df2836d4b456c" category="sidebar">NetApp Knowledge Base – ONTAP Tools</block>
   <block id="bbf1057ad175e1e1664e224351019ac9" category="sidebar">NetApp Import Utility – Video</block>
   <block id="72393f9ef0b6b69526a30ac7ce5276bc" category="sidebar">NetApp Community – ONTAP Tools</block>
-  <block id="ed9018b2e8611a3d2c03bb6a205b9715" category="sidebar">ONTAP Tools für VMware vSphere</block>
   <block id="4226794a7bb33ab0a2309e30c07c9031" category="sidebar">Management von ONTAP-Tools</block>
   <block id="1b8a04f09ff55290753a17988fd53c2a" category="sidebar">Managen von Datastores</block>
   <block id="427d9ce60f4b39aa82a25138b4aa489f" category="sidebar">Management von Virtual Machines</block>
@@ -1931,4 +1929,5 @@ Eine Erfolgsmeldung, die bestätigt, dass die Speicher-Anmeldedaten gespeichert 
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
+  <block id="bdc5a4ba1115f3f724e1f81e7f41eeef" category="list-text">Klicken Sie mit der rechten Maustaste auf den Datastore, und wählen Sie *NetApp ONTAP Tools* &gt; *Größe des Datastore ohne VVols* aus.</block>
 </blocks>
